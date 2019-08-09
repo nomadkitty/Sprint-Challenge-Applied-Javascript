@@ -20,7 +20,7 @@
 const carouselContainer = document.querySelector('carousel-container')
 const imgArr = ["./assets/carousel/mountains.jpeg", "./assets/carousel/computer.jpeg", "./assets/carousel/trees.jpeg", "./assets/carousel/turntable.jpeg"]
 
-carouselContainer.appendChild(Carousel());
+carouselContainer.appendChild(Carousel(item));
 
 function Carousel(item) {
   // create element
@@ -66,17 +66,19 @@ function Carousel(item) {
 
   // set img src
   imgArr.forEach(item =>{
-    const li = document.createElement('li')
-    const 
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    img.src = item;
+    li.appendChild(img);
   })
 
   // add btn event
   leftBtn.addEventListener('click', ()=>{
-    carousel.classList.toggle('img')
+    
   })
 
   rightBtn.addEventListener('click', ()=>{
-    carousel.tag
+    
   })
 
   return carousel
