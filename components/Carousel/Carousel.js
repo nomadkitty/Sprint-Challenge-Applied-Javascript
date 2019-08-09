@@ -17,3 +17,67 @@
     <div class="right-button"> > </div>
   </div>
 */
+const carouselContainer = document.querySelector('carousel-container')
+const imgArr = ["./assets/carousel/mountains.jpeg", "./assets/carousel/computer.jpeg", "./assets/carousel/trees.jpeg", "./assets/carousel/turntable.jpeg"]
+
+carouselContainer.appendChild(Carousel());
+
+function Carousel(item) {
+  // create element
+  const carousel = document.createElement('div');
+  const leftBtn = document.createElement('div');
+  const index = document.createElement('ul');
+  // const li1 = document.createElement('li');
+  // const li2 = document.createElement('li');
+  // const li3 = document.createElement('li');
+  // const li4 = document.createElement('li')
+  // const imgMt = document.createElement('img');
+  // const imgCp = document.createElement('img');
+  // const imgTree = document.createElement('img');
+  // const imgTT = document.createElement('img');
+  const rightBtn = document.createElement('div');
+  
+
+  // set class to element
+  carousel.classList.add('carousel');
+  leftBtn.classList.add('left-button');
+  rightBtn.classList.add('rightBtn');
+
+  // set value to element
+  leftBtn.textContent = '<';
+  // imgMt.src = imageMT;
+  // imgCp.scr = imageCP;
+  // imgTree.src = imageTree;
+  // imgTT.src = imageTT;
+  rightBtn.textContent = '>';
+
+  // set structure
+  carousel.appendChild(leftBtn);
+  carousel.appendChild(index);
+  // index.appendChild(li1)
+  // li1.appendChild(imgMt);
+  // index.appendChild(li2)
+  // li2.appendChild(imgCp);
+  // index.appendChild(li3)
+  // li3.appendChild(imgTree);
+  // index.appendChild(li4)
+  // li4.appendChild(imgTT);
+  carousel.appendChild(rightBtn);
+
+  // set img src
+  imgArr.forEach(item =>{
+    const li = document.createElement('li')
+    const 
+  })
+
+  // add btn event
+  leftBtn.addEventListener('click', ()=>{
+    carousel.classList.toggle('img')
+  })
+
+  rightBtn.addEventListener('click', ()=>{
+    carousel.tag
+  })
+
+  return carousel
+}
